@@ -22,6 +22,16 @@ defmodule PhxGenAuthCheckWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/api/graph" do
+    pipe_through :api
+
+    forward "/graphql", Absinthe.Plug, schema: PhxGenAuthCheckWeb.Schema
+
+    if Mix.env() == :dev do
+      forward "/graphiql", Absinthe.Plug.GraphiQL, schema: PhxGenAuthCheckWeb.Schema
+    end
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", PhxGenAuthCheckWeb do
   #   pipe_through :api
