@@ -9,4 +9,43 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
+API
 
+Example Queries that could be run:
+http://localhost:4000/api/graph/graphiql
+
+
+Register a user:
+-----------------
+
+mutation{
+  registerUser (
+    input: {
+      username: "streamerd", 
+      email: "abcd@e.fu",
+    	password: "123456789-qwert-y0",
+      role: "user",
+      behaviours: ["audience", "artist", "volunteer"]
+      city: "Hamburg",
+      country: "Germany"
+    } ){
+   id
+    username
+    country
+    city
+    behaviours
+  }  
+}
+
+
+
+
+Get all users:
+------------------
+{
+  users{
+    city
+    country
+    behaviours
+  }
+}

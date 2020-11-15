@@ -33,8 +33,6 @@ defmodule PhxGenAuthCheck.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      # {:bcrypt_elixir, "~> 2.0"},
-      {:argon2_elixir, "~> 2.0"},
       {:phoenix, "~> 1.5.6"},
       {:phoenix_ecto, "~> 4.1"},
       {:ecto_sql, "~> 3.4"},
@@ -47,10 +45,11 @@ defmodule PhxGenAuthCheck.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
+
       {:phx_gen_auth, "~> 0.5", only: [:dev], runtime: false},
+      {:argon2_elixir, "~> 2.0"},
 
       {:absinthe, "~> 1.5.0"},
-      # {:absinthe_ecto, "~> 0.1.3"},
       {:absinthe_plug, "~> 1.5.0"},
       {:absinthe_phoenix, "~> 2.0.0"},
       {:cors_plug, "~> 2.0"}
