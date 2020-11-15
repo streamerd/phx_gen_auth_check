@@ -17,7 +17,7 @@ http://localhost:4000/api/graph/graphiql
 
 Register a user (Mutation):
 -----------------
-
+```
 mutation{
   registerUser (
     input: {
@@ -36,10 +36,11 @@ mutation{
     behaviours
   }  
 }
-
+```
 
 Get all users (Query):
 ------------------
+```
 {
   users{
     city
@@ -47,3 +48,4 @@ Get all users (Query):
     behaviours
   }
 }
+```
