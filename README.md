@@ -1,4 +1,4 @@
-# User Login/Registration backed Phoenix Framework App starter, using phx.gen.auth.
+# User Login/Registration included Phoenix Framework App starter with GraphQL, using phx.gen.auth and Absinthe
 
 To start your Phoenix server:
 
