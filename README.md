@@ -18,34 +18,10 @@ http://localhost:4000/api/graph/graphiql
 Register a user:
 -----------------
 
-mutation{
-  registerUser (
-    input: {
-      username: "streamerd", 
-      email: "abcd@e.fu",
-    	password: "123456789-qwert-y0",
-      role: "user",
-      behaviours: ["audience", "artist", "volunteer"]
-      city: "Hamburg",
-      country: "Germany"
-    } ){
-   id
-    username
-    country
-    city
-    behaviours
-  }  
-}
-
-
+<script src="https://gist.github.com/streamerd/3cb7160eac3cf5ea1ac40546cb50fd90.js"></script>
 
 
 Get all users:
 ------------------
-{
-  users{
-    city
-    country
-    behaviours
-  }
-}
+
+<script src="https://gist.github.com/streamerd/aac4023bde52d6a40157771755e4659b.js"></script>
