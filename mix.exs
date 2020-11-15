@@ -47,7 +47,13 @@ defmodule PhxGenAuthCheck.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:phx_gen_auth, "~> 0.5", only: [:dev], runtime: false}
+      {:phx_gen_auth, "~> 0.5", only: [:dev], runtime: false},
+
+      {:absinthe, "~> 1.5.0"},
+      # {:absinthe_ecto, "~> 0.1.3"},
+      {:absinthe_plug, "~> 1.5.0"},
+      {:absinthe_phoenix, "~> 2.0.0"},
+      {:cors_plug, "~> 2.0"}
     ]
   end
 
