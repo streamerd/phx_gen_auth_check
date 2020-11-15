@@ -1,4 +1,4 @@
-# Authorized App Starter using phx.gen.auth of Phoenix Framework
+# User Login/Registration backed Phoenix Framework App starter, using phx.gen.auth.
 
 To start your Phoenix server:
 
