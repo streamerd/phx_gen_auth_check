@@ -18,10 +18,10 @@ http://localhost:4000/api/graph/graphiql
 Register a user:
 -----------------
 
-<script src="https://gist.github.com/streamerd/3cb7160eac3cf5ea1ac40546cb50fd90.js"></script>
+{% gist 3cb7160eac3cf5ea1ac40546cb50fd90 %}
 
 
 Get all users:
 ------------------
 
-<script src="https://gist.github.com/streamerd/aac4023bde52d6a40157771755e4659b.js"></script>
+{% gist aac4023bde52d6a40157771755e4659b %}
