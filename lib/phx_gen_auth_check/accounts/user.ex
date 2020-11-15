@@ -11,26 +11,15 @@ defmodule PhxGenAuthCheck.Accounts.User do
 
     timestamps()
 
-    # added after phx.gen.auth Accounts User ..
-    field :username
+    # Below fields added after phx.gen.auth
+    field :username, :string
     field :city, :string
     field :country, :string
-    field :roles, {:array, :string}, default: ["user"]
+    field :role, :string, default: "user"
     field :behaviours, {:array, :string}, default: ["audience"]
-    # embeds_many :external_logins, ExternalLogin
   end
 
 
-
-  # defmodule PhxGenAuthCheck.Accounts.ExternalLogin do
-  #   use Ecto.Schema
-  #   embedded_schema do
-  #     field :platform_name, :string
-  #     field :username, :string
-  #     field :email, :string
-  #     field :is_active, :boolean, default: false
-  #   end
-  # end
 
   @doc """
   A user changeset for registration.
@@ -42,7 +31,7 @@ defmodule PhxGenAuthCheck.Accounts.User do
   """
   def registration_changeset(user, attrs) do
     user
-    |> cast(attrs, [:email, :password, :username, :city, :country])
+    |> cast(attrs, [:email, :password, :username, :city, :country, :role, :behaviours])
     |> validate_email()
     |> validate_password()
   end
@@ -60,9 +49,9 @@ defmodule PhxGenAuthCheck.Accounts.User do
     changeset
     |> validate_required([:password])
     |> validate_length(:password, min: 10, max: 80)
-    # |> validate_format(:password, ~r/[a-z]/, message: "at least one lower case character")
-    # |> validate_format(:password, ~r/[A-Z]/, message: "at least one upper case character")
-    # |> validate_format(:password, ~r/[!?@#$%^&*_0-9]/, message: "at least one digit or punctuation character")
+    |> validate_format(:password, ~r/[a-z]/, message: "at least one lower case character")
+    |> validate_format(:password, ~r/[A-Z]/, message: "at least one upper case character")
+    |> validate_format(:password, ~r/[!?@#$%^&*_0-9]/, message: "at least one digit or punctuation character")
     |> prepare_changes(&hash_password/1)
   end
 

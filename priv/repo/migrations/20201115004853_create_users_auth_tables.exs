@@ -10,20 +10,18 @@ defmodule PhxGenAuthCheck.Repo.Migrations.CreateUsersAuthTables do
       add :confirmed_at, :naive_datetime
       timestamps()
 
-      # (+) phx.gen.auth Accounts User ..
+    # Below fields added after phx.gen.auth
       add :username, :string
       add :city, :string
       add :country, :string
 
-      add :roles, {:array, :string}, default: ["user"]
+      add :role, :string, default: "user"
       add :behaviours, {:array, :string}, default: ["audience"]
-      # add :external_logins, {:array, :map}, default: []
-      # (+) phx.gen.auth Accounts User ..
     end
 
     create index(:users, [:behaviours, :city, :country])
 
-    # phx.gen.auth + (:username)
+    # (:username field added to index after phx.gen.auth
     create unique_index(:users, [:email, :username])
 
     create table(:users_tokens) do
