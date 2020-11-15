@@ -42,7 +42,7 @@ defmodule PhxGenAuthCheck.Accounts.User do
   """
   def registration_changeset(user, attrs) do
     user
-    |> cast(attrs, [:email, :password])
+    |> cast(attrs, [:email, :password, :username, :city, :country])
     |> validate_email()
     |> validate_password()
   end
