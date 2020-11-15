@@ -18,10 +18,10 @@ http://localhost:4000/api/graph/graphiql
 Register a user:
 -----------------
 
-{% gist 3cb7160eac3cf5ea1ac40546cb50fd90 %}
+{% gist:3cb7160eac3cf5ea1ac40546cb50fd90 %}
 
 
 Get all users:
 ------------------
 
-{% gist aac4023bde52d6a40157771755e4659b %}
+{% gist:aac4023bde52d6a40157771755e4659b %}
