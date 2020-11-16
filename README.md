@@ -49,3 +49,28 @@ Get all users (Query):
   }
 }
 ```
+
+Registration Form
+------------------------------
+
+![registration_form](./screenshots/registration_form.png)
+
+Login Form
+------------------------------
+
+![login_form](./screenshots/login_form.png)
+
+
+User Logged In
+------------------------------
+
+![user_logged_in](./screenshots/user_logged_in.png)
+
+
+User Logged Out
+------------------------------
+
+![user_logged_out](./screenshots/user_logged_out.png)
+
+
+
